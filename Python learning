@@ -1,0 +1,29 @@
+print ("You will think of a secret number in between 0 and 100, and I'll discover it!")
+
+print ("Everythime I guess a number you will have to press 'C' if CORRECT, 'L' if you number is LOWER or 'H' if your number is HIGHER")
+
+high = 100 
+
+low = 0 
+
+guess = (high + low) / 2
+
+check = ""
+
+print ("Now please think of a number between 0 and 100!")
+
+while check != "C":
+    print ("is this your number, " + str(guess) + "?")
+    print ("Press 'C' if CORRECT, 'L' if you number is LOWER or 'H' if your number is HIGHER")
+    check = input ("")
+    if check == 'H':
+        low = guess
+    elif check == 'L':
+        high = guess
+    elif check == 'C':
+        break
+    else:
+        print ("Sorry, I don't understand! Please Press again")
+    guess = (high + low) / 2
+        
+print ("Done! Your secret number is " + str(guess) + "!!!!") 
